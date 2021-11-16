@@ -136,12 +136,12 @@
           <div class="row">
             <div class="col-md-6 col-lg-3">
               <div class="about-thumb" data-aos="fade-down" data-aos-duration="1000">
-                <img src="assets/img/about/1.jpg" alt="Image-HasTech">
+                <img src="assets/img/about/11.jpg" alt="Image-HasTech">
               </div>
             </div>
             <div class="col-md-6 col-lg-3">
               <div class="about-thumb about-thumb-two" data-aos="fade-down" data-aos-duration="1200">
-                <img src="assets/img/about/2.jpg" alt="Image-HasTech">
+                <img src="assets/img/about/22.jpg" alt="Image-HasTech">
               </div>
             </div>
             <div class="col-lg-6">

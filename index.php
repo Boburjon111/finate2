@@ -8,7 +8,7 @@ include_once("header.php");
     <section class="home-slider-area">
       <div class="home-slider-container default-slider-container">
         <div class="home-slider-wrapper slider-default">
-          <div class="slider-content-area" data-bg-img="assets/img/slider/slider-bg.jpg">
+          <div class="slider-content-area" data-bg-img="assets/img/slider/slider-nn.jpg">
             <div class="container pt--0 pb--0">
               <div class="slider-container">
                 <div class="row justify-content-center align-items-center">
@@ -94,7 +94,7 @@ include_once("header.php");
         <div class="row">
           <div class="col-12">
             <div class="play-video-btn">
-              <a href="https://www.youtube.com/mcvqOUtcAJg" class="video-popup">
+              <a href="https://www.youtube.com/" class="video-popup">
                 <img src="assets/img/icons/play.png" alt="Image-HasTech">
               </a>
             </div>
@@ -102,10 +102,10 @@ include_once("header.php");
         </div>
       </div>
       <div class="home-slider-shape">
-        <img class="shape1" data-aos="fade-down" data-aos-duration="1500" src="assets/img/slider/vector1.png" width="270" height="234" alt="Image-HasTech">
-        <img class="shape2" data-aos="fade-left" data-aos-duration="2000" src="assets/img/slider/vector2.png" width="201" height="346" alt="Image-HasTech">
-        <img class="shape3" data-aos="fade-right" data-aos-duration="2000" src="assets/img/slider/vector3.png" width="276" height="432" alt="Image-HasTech">
-        <img class="shape4" data-aos="flip-left" data-aos-duration="1500" src="assets/img/slider/vector4.png" width="127" height="121" alt="Image-HasTech">
+        <!-- <img class="shape1" data-aos="fade-down" data-aos-duration="1500" src="#" width="270" height="234" >
+        <img class="shape2" data-aos="fade-left" data-aos-duration="2000" src="#" width="201" height="346" >
+        <img class="shape3" data-aos="fade-right" data-aos-duration="2000" src="#" width="276" height="432" >
+        <img class="shape4" data-aos="flip-left" data-aos-duration="1500" src="#" width="127" height="121" > -->
       </div>
     </section>
     <!--== End Hero Area Wrapper ==-->
@@ -157,248 +157,36 @@ foreach($array_category as $q){
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Recent Job Item ==-->
-            <div class="recent-job-item">
-              <div class="company-info">
-                <div class="logo">
-                  <a href="company-details.php"><img src="assets/img/companies/1.jpg" width="75" height="75" alt="Image-HasTech"></a>
-                </div>
-                <div class="content">
-                  <h4 class="name"><a href="company-details.php">Darkento Ltd.</a></h4>
-                  <p class="address">New York, USA</p>
-                </div>
-              </div>
-              <div class="main-content">
-                <h3 class="title"><a href="job-details.php">Front-end Developer</a></h3>
-                <h5 class="work-type">Full-time</h5>
-                <p class="desc">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-              </div>
-              <div class="recent-job-info">
-                <div class="salary">
-                  <h4>$5000</h4>
-                  <p>/monthly</p>
-                </div>
-                <a class="btn-theme btn-sm" href="job-details.php">Apply Now</a>
-              </div>
-            </div>
-            <!--== End Recent Job Item ==-->
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Recent Job Item ==-->
-            <div class="recent-job-item">
-              <div class="company-info">
-                <div class="logo">
-                  <a href="company-details.php"><img src="assets/img/companies/2.jpg" width="75" height="75" alt="Image-HasTech"></a>
-                </div>
-                <div class="content">
-                  <h4 class="name"><a href="company-details.php">Inspire Fitness Co.</a></h4>
-                  <p class="address">New York, USA</p>
-                </div>
-              </div>
-              <div class="main-content">
-                <h3 class="title"><a href="job-details.php">Senior UI Designer</a></h3>
-                <h5 class="work-type" data-text-color="#ff7e00">Part-time</h5>
-                <p class="desc">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-              </div>
-              <div class="recent-job-info">
-                <div class="salary">
-                  <h4>$5000</h4>
-                  <p>/monthly</p>
-                </div>
-                <a class="btn-theme btn-sm" href="job-details.php">Apply Now</a>
-              </div>
-            </div>
-            <!--== End Recent Job Item ==-->
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Recent Job Item ==-->
-            <div class="recent-job-item">
-              <div class="company-info">
-                <div class="logo">
-                  <a href="company-details.php"><img src="assets/img/companies/3.jpg" width="75" height="75" alt="Image-HasTech"></a>
-                </div>
-                <div class="content">
-                  <h4 class="name"><a href="company-details.php">Cogent Data</a></h4>
-                  <p class="address">New York, USA</p>
-                </div>
-              </div>
-              <div class="main-content">
-                <h3 class="title"><a href="job-details.php">Graphic Designer</a></h3>
-                <h5 class="work-type" data-text-color="#0054ff">Remote</h5>
-                <p class="desc">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-              </div>
-              <div class="recent-job-info">
-                <div class="salary">
-                  <h4>$5000</h4>
-                  <p>/monthly</p>
-                </div>
-                <a class="btn-theme btn-sm" href="job-details.php">Apply Now</a>
-              </div>
-            </div>
-            <!--== End Recent Job Item ==-->
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Recent Job Item ==-->
-            <div class="recent-job-item">
-              <div class="company-info">
-                <div class="logo">
-                  <a href="company-details.php"><img src="assets/img/companies/4.jpg" width="75" height="75" alt="Image-HasTech"></a>
-                </div>
-                <div class="content">
-                  <h4 class="name"><a href="company-details.php">Obelus Concepts</a></h4>
-                  <p class="address">New York, USA</p>
-                </div>
-              </div>
-              <div class="main-content">
-                <h3 class="title"><a href="job-details.php">UX Researcher</a></h3>
-                <h5 class="work-type">Full-time</h5>
-                <p class="desc">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-              </div>
-              <div class="recent-job-info">
-                <div class="salary">
-                  <h4>$5000</h4>
-                  <p>/monthly</p>
-                </div>
-                <a class="btn-theme btn-sm" href="job-details.php">Apply Now</a>
-              </div>
-            </div>
-            <!--== End Recent Job Item ==-->
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Recent Job Item ==-->
-            <div class="recent-job-item">
-              <div class="company-info">
-                <div class="logo">
-                  <a href="company-details.php"><img src="assets/img/companies/5.jpg" width="75" height="75" alt="Image-HasTech"></a>
-                </div>
-                <div class="content">
-                  <h4 class="name"><a href="company-details.php">Sanguine Skincare</a></h4>
-                  <p class="address">New York, USA</p>
-                </div>
-              </div>
-              <div class="main-content">
-                <h3 class="title"><a href="job-details.php">Android App Developer</a></h3>
-                <h5 class="work-type" data-text-color="#0054ff">Remote</h5>
-                <p class="desc">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-              </div>
-              <div class="recent-job-info">
-                <div class="salary">
-                  <h4>$5000</h4>
-                  <p>/monthly</p>
-                </div>
-                <a class="btn-theme btn-sm" href="job-details.php">Apply Now</a>
-              </div>
-            </div>
-            <!--== End Recent Job Item ==-->
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Recent Job Item ==-->
-            <div class="recent-job-item">
-              <div class="company-info">
-                <div class="logo">
-                  <a href="company-details.php"><img src="assets/img/companies/6.jpg" width="75" height="75" alt="Image-HasTech"></a>
-                </div>
-                <div class="content">
-                  <h4 class="name"><a href="company-details.php">Flux Water Gear</a></h4>
-                  <p class="address">New York, USA</p>
-                </div>
-              </div>
-              <div class="main-content">
-                <h3 class="title"><a href="job-details.php">Product Designer</a></h3>
-                <h5 class="work-type">Full-time</h5>
-                <p class="desc">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-              </div>
-              <div class="recent-job-info">
-                <div class="salary">
-                  <h4>$5000</h4>
-                  <p>/monthly</p>
-                </div>
-                <a class="btn-theme btn-sm" href="job-details.php">Apply Now</a>
-              </div>
-            </div>
-            <!--== End Recent Job Item ==-->
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Recent Job Item ==-->
-            <div class="recent-job-item">
-              <div class="company-info">
-                <div class="logo">
-                  <a href="company-details.php"><img src="assets/img/companies/7.jpg" width="75" height="75" alt="Image-HasTech"></a>
-                </div>
-                <div class="content">
-                  <h4 class="name"><a href="company-details.php">Darkento Ltd.</a></h4>
-                  <p class="address">New York, USA</p>
-                </div>
-              </div>
-              <div class="main-content">
-                <h3 class="title"><a href="job-details.php">Front-end Developer</a></h3>
-                <h5 class="work-type">Full-time</h5>
-                <p class="desc">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-              </div>
-              <div class="recent-job-info">
-                <div class="salary">
-                  <h4>$5000</h4>
-                  <p>/monthly</p>
-                </div>
-                <a class="btn-theme btn-sm" href="job-details.php">Apply Now</a>
-              </div>
-            </div>
-            <!--== End Recent Job Item ==-->
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Recent Job Item ==-->
-            <div class="recent-job-item">
-              <div class="company-info">
-                <div class="logo">
-                  <a href="company-details.php"><img src="assets/img/companies/8.jpg" width="75" height="75" alt="Image-HasTech"></a>
-                </div>
-                <div class="content">
-                  <h4 class="name"><a href="company-details.php">Inspire Fitness Co.</a></h4>
-                  <p class="address">New York, USA</p>
-                </div>
-              </div>
-              <div class="main-content">
-                <h3 class="title"><a href="job-details.php">Senior UI Designer</a></h3>
-                <h5 class="work-type" data-text-color="#ff7e00">Part-time</h5>
-                <p class="desc">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-              </div>
-              <div class="recent-job-info">
-                <div class="salary">
-                  <h4>$5000</h4>
-                  <p>/monthly</p>
-                </div>
-                <a class="btn-theme btn-sm" href="job-details.php">Apply Now</a>
-              </div>
-            </div>
-            <!--== End Recent Job Item ==-->
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Recent Job Item ==-->
-            <div class="recent-job-item">
-              <div class="company-info">
-                <div class="logo">
-                  <a href="company-details.php"><img src="assets/img/companies/9.jpg" width="75" height="75" alt="Image-HasTech"></a>
-                </div>
-                <div class="content">
-                  <h4 class="name"><a href="company-details.php">Cogent Data</a></h4>
-                  <p class="address">New York, USA</p>
-                </div>
-              </div>
-              <div class="main-content">
-                <h3 class="title"><a href="job-details.php">Graphic Designer</a></h3>
-                <h5 class="work-type" data-text-color="#0054ff">Part-time</h5>
-                <p class="desc">CSS3, HTML5, Javascript, Bootstrap, Jquery</p>
-              </div>
-              <div class="recent-job-info">
-                <div class="salary">
-                  <h4>$5000</h4>
-                  <p>/monthly</p>
-                </div>
-                <a class="btn-theme btn-sm" href="job-details.php">Apply Now</a>
-              </div>
-            </div>
-            <!--== End Recent Job Item ==-->
+
+        <?php
+foreach($array_category as $key1){
+  echo '<div class="col-md-6 col-lg-4">
+  <div class="recent-job-item">
+    <div class="company-info">
+      <div class="logo">
+        <a href="#"><img src="'.$key1['image'].'" width="75" height="75" alt="Image-HasTech"></a>
+      </div>
+      <div class="content">
+        <h4 class="name"><a href="#">'.$key1['name'].'</a></h4>
+        <p class="address">'.$key1['adress'].'</p>
+      </div>
+    </div>
+    <div class="main-content">
+      <h3 class="title"><a href="job-details.php">'.$key1['job'].'</a></h3>
+      <h5 class="work-type">'.$key1['job.type'].'</h5>
+      <p class="desc">'.$key1['language_'].'</p>
+    </div>
+    <div class="recent-job-info">
+      <div class="salary">
+        <h4>'.$key1['price'].'</h4>
+        <p>/'.$key1['workingtime'].'</p>
+      </div>
+      <a class="btn-theme btn-sm" href="job-details.php">Apply Now</a>
+    </div>
+  </div>
+</div>';
+}
+        ?>
           </div>
         </div>
       </div>

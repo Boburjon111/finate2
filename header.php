@@ -17,13 +17,14 @@ $city_result = mysqli_query($connect, $city_zapros);
 $array_city = [];
 while($row2 = mysqli_fetch_assoc($city_result)){
 $array_city[] = $row2;
+}
 
 
 $category_zapros = "SELECT * FROM `category` WHERE status='1'";
-$category_result = mysqli_query($connect, $city_category);
+$category_result = mysqli_query($connect, $category_zapros);
 
 $array_category = [];
-while($row3 = mysqli_fetch_assoc($city_category)){
+while($row3 = mysqli_fetch_assoc($category_result)){
 $array_category[] = $row3;
 
 }
@@ -105,21 +106,14 @@ $array_category[] = $row3;
               echo '';
             }
 
-
-           
-         
-
-           
           echo '</li>
             </ul>
             </div>
           </div>';
           }
-
-
 ?>
             
-                
+             
             <div class="header-align-end">
               <div class="header-action-area">
                 <a class="btn-registration" href="registration.php"><span>+</span> Registration</a>
@@ -132,4 +126,5 @@ $array_category[] = $row3;
         </div>
       </div>
     </div>
-</header>
+</header> 
+        
