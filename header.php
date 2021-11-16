@@ -1,7 +1,7 @@
 <?php 
 include_once("db.php");
 
-$header_zapros = "SELECT * FROM `menu`";
+$header_zapros = "SELECT * FROM `menu` WHERE status='1'";
 $header_result = mysqli_query($connect, $header_zapros);
 
 
@@ -11,6 +11,22 @@ while($row = mysqli_fetch_assoc($header_result)){
 }
 
 
+$city_zapros = "SELECT * FROM `choosen city` WHERE status='1'";
+$city_result = mysqli_query($connect, $city_zapros);
+
+$array_city = [];
+while($row2 = mysqli_fetch_assoc($city_result)){
+$array_city[] = $row2;
+
+
+$category_zapros = "SELECT * FROM `category` WHERE status='1'";
+$category_result = mysqli_query($connect, $city_category);
+
+$array_category = [];
+while($row3 = mysqli_fetch_assoc($city_category)){
+$array_category[] = $row3;
+
+}
 ?>
 
 
@@ -78,14 +94,23 @@ while($row = mysqli_fetch_assoc($header_result)){
             echo '<div class="header-align-center">
             <div class="header-navigation-area position-relative">
             <ul class="main-menu nav">
-            <li class="has-submenu"><a href="#/"><span>'.$key['theme'].'</span></a>
-            <ul class="submenu-nav">
-              <li><a href="'.$key['link1'].'">'.$key['subheader1'].'</a></li>
-              <li><a href="'.$key['link2'].'">'.$key['subheader2'].'</a></li>
-              <li><a href="'.$key['link3'].'">'.$key['subheader3'].'</a></li>
-              <li><a href="'.$key['link4'].'">'.$key['subheader4'].'</a></li>
-            </ul>
-          </li>
+            <li class="has-submenu"><a href="'.$key['link'].'"><span>'.$key['theme'].'</span></a>';
+            if($key['num']>0){ 
+              echo '<ul class="submenu-nav">';
+              for($i=1; $i<=$key['num']; $i++){
+                echo '<li><a href="'.$key['link'.$i.''].'">'.$key['subheader'.$i.''].'</a></li>';
+            }
+               echo '</ul>';
+            }else{
+              echo '';
+            }
+
+
+           
+         
+
+           
+          echo '</li>
             </ul>
             </div>
           </div>';
@@ -94,9 +119,7 @@ while($row = mysqli_fetch_assoc($header_result)){
 
 ?>
             
-                </ul>
-              </div>
-            </div>
+                
             <div class="header-align-end">
               <div class="header-action-area">
                 <a class="btn-registration" href="registration.php"><span>+</span> Registration</a>
@@ -109,5 +132,4 @@ while($row = mysqli_fetch_assoc($header_result)){
         </div>
       </div>
     </div>
-  </header>
-  <!--== End Header Wrapper ==-->
+</header>

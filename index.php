@@ -31,24 +31,46 @@ include_once("header.php");
                             <div class="col-lg-auto col-sm-6 col-12 flex-grow-1">
                               <div class="form-group">
                                 <select class="form-control">
-                                  <option value="1" selected>Choose City</option>
-                                  <option value="2">New York</option>
-                                  <option value="3">California</option>
-                                  <option value="4">Illinois</option>
-                                  <option value="5">Texas</option>
-                                  <option value="6">Florida</option>
+                                  <?php
+                                  foreach($array_city as $key){
+                                    if($key['name'] == 'Samarkand'){
+                                      $selected = 'selected';
+                                  }
+                                  else{
+                                    $selected = '';
+                                  }
+                                  echo '<option value="'.$key['id'].'">'.$key['name'].'</option>';
+                                }
+                                
+
+
+
+?>
+
+
+
+                                  
                                 </select>
                               </div>
                             </div>
                             <div class="col-lg-auto col-sm-6 col-12 flex-grow-1">
                               <div class="form-group">
-                                <select class="form-control">
-                                  <option value="1" selected>Category</option>
-                                  <option value="2">Web Designer</option>
-                                  <option value="3">Web Developer</option>
-                                  <option value="4">Graphic Designer</option>
-                                  <option value="5">App Developer</option>
-                                  <option value="6">UI &amp; UX Expert</option>
+                                <select class="form-control"><?php
+                                  foreach($array_category as $key){
+                                    if($key['job'] == 'Samarkand'){
+                                      $selected = 'selected';
+                                  }
+                                  else{
+                                    $selected = '';
+                                  }
+                                  echo '<option value="'.$key['id'].'">'.$key['job'].'</option>';
+                                }
+                                
+
+
+
+?>
+                              
                                 </select>
                               </div>
                             </div>
@@ -102,125 +124,19 @@ include_once("header.php");
           </div>
         </div>
         <div class="row row-gutter-20" >
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Job Category Item ==-->
-            <div class="job-category-item">
-              <div class="content">
-                <h3 class="title"><a href="job-details.php">Accounting/Finance <span>(305)</span></a></h3>
-              </div>
-              <a class="overlay-link" href="job-details.php"></a>
-            </div>
-            <!--== End Job Category Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Job Category Item ==-->
-            <div class="job-category-item">
-              <div class="content">
-                <h3 class="title"><a href="job-details.php">Production/Operation <span>(95)</span></a></h3>
-              </div>
-              <a class="overlay-link" href="job-details.php"></a>
-            </div>
-            <!--== End Job Category Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Job Category Item ==-->
-            <div class="job-category-item">
-              <div class="content">
-                <h3 class="title"><a href="job-details.php">Education/Training <span>(212)</span></a></h3>
-              </div>
-              <a class="overlay-link" href="job-details.php"></a>
-            </div>
-            <!--== End Job Category Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Job Category Item ==-->
-            <div class="job-category-item">
-              <div class="content">
-                <h3 class="title"><a href="job-details.php">Design/Creative <span>(93)</span></a></h3>
-              </div>
-              <a class="overlay-link" href="job-details.php"></a>
-            </div>
-            <!--== End Job Category Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Job Category Item ==-->
-            <div class="job-category-item">
-              <div class="content">
-                <h3 class="title"><a href="job-details.php">Health & Fitness <span>(4)</span></a></h3>
-              </div>
-              <a class="overlay-link" href="job-details.php"></a>
-            </div>
-            <!--== End Job Category Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Job Category Item ==-->
-            <div class="job-category-item">
-              <div class="content">
-                <h3 class="title"><a href="job-details.php">Research/Consultancy <span>(34)</span></a></h3>
-              </div>
-              <a class="overlay-link" href="job-details.php"></a>
-            </div>
-            <!--== End Job Category Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Job Category Item ==-->
-            <div class="job-category-item">
-              <div class="content">
-                <h3 class="title"><a href="job-details.php">Engineer/Architects <span>(376)</span></a></h3>
-              </div>
-              <a class="overlay-link" href="job-details.php"></a>
-            </div>
-            <!--== End Job Category Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Job Category Item ==-->
-            <div class="job-category-item">
-              <div class="content">
-                <h3 class="title"><a href="job-details.php">Telecommunication <span>(450)</span></a></h3>
-              </div>
-              <a class="overlay-link" href="job-details.php"></a>
-            </div>
-            <!--== End Job Category Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Job Category Item ==-->
-            <div class="job-category-item">
-              <div class="content">
-                <h3 class="title"><a href="job-details.php">Data Entry/Operator <span>(25)</span></a></h3>
-              </div>
-              <a class="overlay-link" href="job-details.php"></a>
-            </div>
-            <!--== End Job Category Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Job Category Item ==-->
-            <div class="job-category-item">
-              <div class="content">
-                <h3 class="title"><a href="job-details.php">Production/Operation <span>(95)</span></a></h3>
-              </div>
-              <a class="overlay-link" href="job-details.php"></a>
-            </div>
-            <!--== End Job Category Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Job Category Item ==-->
-            <div class="job-category-item">
-              <div class="content">
-                <h3 class="title"><a href="job-details.php">Marketing/Sales <span>(666)</span></a></h3>
-              </div>
-              <a class="overlay-link" href="job-details.php"></a>
-            </div>
-            <!--== End Job Category Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Job Category Item ==-->
-            <div class="job-category-item">
-              <div class="content">
-                <h3 class="title"><a href="job-details.php">Security/Support Service <span>(62)</span></a></h3>
-              </div>
-              <a class="overlay-link" href="job-details.php"></a>
-            </div>
-            <!--== End Job Category Item ==-->
+          <?php
+foreach($array_category as $q){
+
+  echo '<div class="col-sm-6 col-lg-3">
+  <div class="job-category-item">
+    <div class="content">
+      <h3 class="title"><a href="job-details.php">'.$q['job'].'<span>(305)</span></a></h3>
+    </div>
+    <a class="overlay-link" href="job-details.php"></a>
+  </div>
+</div>';
+}
+          ?>
           </div>
         </div>
       </div>
