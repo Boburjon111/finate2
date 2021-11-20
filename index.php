@@ -55,22 +55,26 @@ include_once("header.php");
                             </div>
                             <div class="col-lg-auto col-sm-6 col-12 flex-grow-1">
                               <div class="form-group">
-                                <select class="form-control"><?php
-                                  foreach($array_category as $key){
-                                    if($key['job'] == 'Samarkand'){
-                                      $selected = 'selected';
-                                  }
-                                  else{
-                                    $selected = '';
-                                  }
+                                <select class="form-control">
+                                 
+                                  <?php
+                                //   $new_arr = [];
+                                //  foreach($array_category as $key1){
+                                //    if(!in_array($key1['job'], $new_arr['job'])){
+                                //    array_push($new_arr['job'], $key['job']);
+                                //    echo '<option value="'.$key1['id'].'">'.$new_$key['job'].'</option>';
+                                //    }else{
+                                //      echo '<option value="'.$key1['id'].'">'.$new_$key['job'].'</option>';
+                                //    }
+
+                                   
+                                //  }
+                                foreach($array_category as $key){
                                   echo '<option value="'.$key['id'].'">'.$key['job'].'</option>';
+
                                 }
-                                
-
-
-
 ?>
-                              
+                             
                                 </select>
                               </div>
                             </div>
