@@ -26,8 +26,80 @@ $category_result = mysqli_query($connect, $category_zapros);
 $array_category = [];
 while($row3 = mysqli_fetch_assoc($category_result)){
 $array_category[] = $row3;
-
 }
+
+
+$mysqli = "SELECT * FROM `howitwork?`";
+$how_res = mysqli_query($connect, $mysqli);
+$array_1 = [];
+
+while($row6 = mysqli_fetch_assoc($how_res)){
+  $array_1[] = $row6;
+}
+
+
+$mysqli_candidates = "SELECT * FROM `Candidates` WHERE status='1'";
+$candidates_res = mysqli_query($connect, $mysqli_candidates);
+$array_2 = [];
+
+while($row = mysqli_fetch_assoc($candidates_res)){
+  $array_2[] = $row;
+}
+
+$mysqli_icons = "SELECT * FROM `icons` WHERE status='1'";
+$icons_res = mysqli_query($connect, $mysqli_icons);
+$array_3 = [];
+
+while($row = mysqli_fetch_assoc($icons_res)){
+  $array_3[] = $row;
+}
+
+$mysqli_footer = "SELECT * FROM `footer` WHERE status='1'";
+$footer_res = mysqli_query($connect, $mysqli_footer);
+$array_5 = [];
+
+while($row = mysqli_fetch_assoc($footer_res)){
+  $array_5[] = $row;
+}
+
+ 
+
+$mysqli_clients = "SELECT * FROM `clients` WHERE status='1'";
+$clients_res = mysqli_query($connect, $mysqli_clients);
+$array_4 = [];
+
+while($row = mysqli_fetch_assoc($clients_res)){
+  $array_4[] = $row;
+}
+
+
+
+
+$mysqli_footer2 = "SELECT * FROM `footer2` WHERE status='1'";
+$footer2_res = mysqli_query($connect, $mysqli_footer2);
+$array_6 = [];
+
+while($row = mysqli_fetch_assoc($footer2_res)){
+  $array_6[] = $row;
+}
+
+
+
+$mysqli_about = "SELECT * FROM `about-us` WHERE status='1'";
+$about_res = mysqli_query($connect, $mysqli_about);
+$array_7 = [];
+
+while($row = mysqli_fetch_assoc($about_res)){
+  $array_7[] = $row;
+}
+
+
+
+
+
+
+
+
 ?>
 
 

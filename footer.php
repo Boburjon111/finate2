@@ -1,4 +1,6 @@
-
+<?php
+include_once("header.php");
+?>
   <!--== Start Footer Area Wrapper ==-->
   <footer class="footer-area">
     <!--== Start Footer Top ==-->
@@ -22,100 +24,57 @@
       </div>
     </div>
     <!--== End Footer Top ==-->
+<?php
 
-    <!--== Start Footer Main ==-->
-    <div class="footer-main">
+foreach($array_6 as $key){
+  echo '<div class="footer-main">
       <div class="container pt--0 pb--0">
         <div class="row">
           <div class="col-md-6 col-lg-3">
             <div class="widget-item widget-about">
               <div class="widget-logo-area">
                 <a href="index.php">
-                  <img class="logo-main" src="assets/img/logo-light-theme.png" alt="Logo" />
+                  <img class="logo-main" src="'.$key['logo'].'" alt="Logo" />
                 </a>
               </div>
-              <p class="desc">That necessitat ecommerce platform that optimi your store popularised the release</p>
-              <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="icofont-facebook"></i></a>
-                <a href="https://www.skype.com" target="_blank" rel="noopener"><i class="icofont-skype"></i></a>
-                <a href="https://twitter.com" target="_blank" rel="noopener"><i class="icofont-twitter"></i></a>
-              </div>
+              <p class="desc">'.$key['description'].'</p>
+              <div class="social-icons">';
+              for($i=1; $i<=3; $i++){
+                echo ' <a href="'.$key['icon_link_'.$i.''].'" target="_blank" rel="noopener"><i class="icofont-'.$key['icon'.$i.''].'"></i></a>';
+
+              }   
+             echo '</div>
             </div>
           </div>
           <div class="col-lg-9">
-            <div class="row">
-              <div class="col-md-3 col-lg-3">
-                <div class="widget-item nav-menu-item1">
-                  <h4 class="widget-title">Company</h4>
-                  <h4 class="widget-collapsed-title collapsed" data-bs-toggle="collapse" data-bs-target="#widgetId-1">Company</h4>
-                  <div id="widgetId-1" class="collapse widget-collapse-body">
-                    <div class="collapse-body">
-                      <div class="widget-menu-wrap">
-                        <ul class="nav-menu">
-                          <li><a href="about-us.php">About Us</a></li>
-                          <li><a href="about-us.php">Why Extobot</a></li>
-                          <li><a href="contact.php">Contact With Us</a></li>
-                          <li><a href="contact.php">Our Partners</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-lg-3">
-                <div class="widget-item nav-menu-item2">
-                  <h4 class="widget-title">Resources</h4>
-                  <h4 class="widget-collapsed-title collapsed" data-bs-toggle="collapse" data-bs-target="#widgetId-2">Resources</h4>
-                  <div id="widgetId-2" class="collapse widget-collapse-body">
-                    <div class="collapse-body">
-                      <div class="widget-menu-wrap">
-                        <ul class="nav-menu">
-                          <li><a href="account-login.php">Quick Links</a></li>
-                          <li><a href="job.php">Job Packages</a></li>
-                          <li><a href="job.php">Post New Job</a></li>
-                          <li><a href="job.php">Jobs Listing</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-lg-3">
-                <div class="widget-item nav-menu-item3">
-                  <h4 class="widget-title">Legal</h4>
-                  <h4 class="widget-collapsed-title collapsed" data-bs-toggle="collapse" data-bs-target="#widgetId-3">Legal</h4>
-                  <div id="widgetId-3" class="collapse widget-collapse-body">
-                    <div class="collapse-body">
-                      <div class="widget-menu-wrap">
-                        <ul class="nav-menu">
-                          <li><a href="account-login.php">Affiliate</a></li>
-                          <li><a href="blog.php">Blog</a></li>
-                          <li><a href="account-login.php">Help & Support</a></li>
-                          <li><a href="job.php">Careers</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-lg-3">
-                <div class="widget-item nav-menu-item4">
-                  <h4 class="widget-title">Products</h4>
-                  <h4 class="widget-collapsed-title collapsed" data-bs-toggle="collapse" data-bs-target="#widgetId-4">Products</h4>
-                  <div id="widgetId-4" class="collapse widget-collapse-body">
-                    <div class="collapse-body">
-                      <div class="widget-menu-wrap">
-                        <ul class="nav-menu">
-                          <li><a href="account-login.php">Star a Trial</a></li>
-                          <li><a href="about-us.php">How It Works</a></li>
-                          <li><a href="account-login.php">Features</a></li>
-                          <li><a href="about-us.php">Price & Planing</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="row">';
+}
+
+    ?>
+
+<?php
+foreach($array_5 as $key){
+  echo '<div class="col-md-3 col-lg-3">
+    <div class="widget-item nav-menu-item1">
+      <h4 class="widget-title">'.$key['title'].'</h4>
+      <h4 class="widget-collapsed-title collapsed" data-bs-toggle="collapse" data-bs-target="#widgetId-1">'.$key['title'].'</h4>
+      <div id="widgetId-1" class="collapse widget-collapse-body">
+        <div class="collapse-body">
+          <div class="widget-menu-wrap">
+           <ul class="nav-menu">
+          ';
+          for($i=1; $i<=4; $i++){
+            echo '<li><a href="'.$key['link'.$i.''].'">'.$key['subheader'.$i.''].'</a></li>';
+          }
+           echo ' </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>';
+}
+
+?>
             </div>
           </div>
         </div>
@@ -151,39 +110,25 @@
     <div class="offcanvas-body">
       <!-- Mobile Menu Start -->
       <div class="mobile-menu-items">
-        <ul class="nav-menu">
-          <li><a href="index.php">Home</a></li>
-          <li><a href="#">Find Jobs</a>
-            <ul class="sub-menu">
-              <li><a href="job.php">Jobs</a></li>
-              <li><a href="job-details.php">Job Details</a></li>
-            </ul>
-          </li>
-          <li><a href="employers-details.php">Employers Details</a></li>
-          <li><a href="#">Candidates</a>
-            <ul class="sub-menu">
-              <li><a href="candidate.php">Candidates</a></li>
-              <li><a href="candidate-details.php">Candidate Details</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Blog</a>
-            <ul class="sub-menu">
-              <li><a href="blog-grid.php">Blog Grid</a></li>
-              <li><a href="blog.php">Blog Left Sidebar</a></li>
-              <li><a href="blog-right-sidebar.php">Blog Right Sidebar</a></li>
-              <li><a href="blog-details.php">Blog Details</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Pages</a>
-            <ul class="sub-menu">
-              <li><a href="about-us.php">About us</a></li>
-              <li><a href="login.php">Login</a></li>
-              <li><a href="registration.php">Registration</a></li>
-              <li><a href="page-not-found.php">Page Not Found</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.php">Contact</a></li>
-        </ul>
+      <ul class="nav-menu">
+<?php
+      foreach($array_header as $key){
+            echo ' <li><a href="'.$key['link'].'">'.$key['theme'].'</a></li>';
+            if($key['num']>0){
+              echo '<ul class="sub-menu">';
+              for($i=1; $i<=$key['num']; $i++){
+                echo '<li><a href="'.$key['link'.$i.''].'">'.$key['subheader'.$i.''].'</a></li>';
+                echo '</ul>';
+            }
+          }else{
+              echo '';
+            }
+           
+          
+        }
+
+?>
+ </ul>
       </div>
       <!-- Mobile Menu End -->
     </div>

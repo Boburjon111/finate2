@@ -1,6 +1,8 @@
 <?php
 include_once("header.php");
 
+
+
 ?>
   
   <main class="main-content">
@@ -8,7 +10,7 @@ include_once("header.php");
     <section class="home-slider-area">
       <div class="home-slider-container default-slider-container">
         <div class="home-slider-wrapper slider-default">
-          <div class="slider-content-area" data-bg-img="assets/img/slider/slider-nn.jpg">
+          <div class="slider-content-area" data-bg-img="assets/img/slider/slider-nn(2).jpg">
             <div class="container pt--0 pb--0">
               <div class="slider-container">
                 <div class="row justify-content-center align-items-center">
@@ -18,76 +20,71 @@ include_once("header.php");
                       <p class="desc">Find great job for build your bright career. Have many job in this plactform.</p>
                     </div>
                   </div>
-                  <div class="col-12">
-                    <div class="job-search-wrap">
-                      <div class="job-search-form">
-                        <form action="#">
-                          <div class="row row-gutter-10">
-                            <div class="col-lg-auto col-sm-6 col-12 flex-grow-1">
-                              <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Job title or keywords">
-                              </div>
-                            </div>
-                            <div class="col-lg-auto col-sm-6 col-12 flex-grow-1">
-                              <div class="form-group">
-                                <select class="form-control">
-                                  <?php
-                                  foreach($array_city as $key){
-                                    if($key['name'] == 'Samarkand'){
-                                      $selected = 'selected';
-                                  }
-                                  else{
-                                    $selected = '';
-                                  }
-                                  echo '<option value="'.$key['id'].'">'.$key['name'].'</option>';
-                                }
-                                
-
-
-
-?>
-
-
-
-                                  
-                                </select>
-                              </div>
-                            </div>
-                            <div class="col-lg-auto col-sm-6 col-12 flex-grow-1">
-                              <div class="form-group">
-                                <select class="form-control">
-                                 
-                                  <?php
-                                //   $new_arr = [];
-                                //  foreach($array_category as $key1){
-                                //    if(!in_array($key1['job'], $new_arr['job'])){
-                                //    array_push($new_arr['job'], $key['job']);
-                                //    echo '<option value="'.$key1['id'].'">'.$new_$key['job'].'</option>';
-                                //    }else{
-                                //      echo '<option value="'.$key1['id'].'">'.$new_$key['job'].'</option>';
-                                //    }
-
-                                   
-                                //  }
-                                foreach($array_category as $key){
-                                  echo '<option value="'.$key['id'].'">'.$key['job'].'</option>';
-
-                                }
-?>
-                             
-                                </select>
-                              </div>
-                            </div>
-                            <div class="col-lg-auto col-sm-6 col-12 flex-grow-1">
-                              <div class="form-group">
-                                <button type="button" class="btn-form-search"><i class="icofont-search-1"></i></button>
-                              </div>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
+<div class="col-12">
+<div class="job-search-wrap">
+  <div class="job-search-form">
+    <form action="search.php" >
+      <div class="row row-gutter-10">
+        <div class="col-lg-auto col-sm-6 col-12 flex-grow-1">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search" method = "get" name = "q">
+          </div>
+        </div>
+        
+        <div class="col-lg-auto col-sm-6 col-12 flex-grow-1">
+          <div class="form-group"  method = "get" name = "cat">
+            <select class="form-control">
+              <?php
+              foreach($array_city as $key){
+                $selected = "selected";
+                if($key['id'] != 1){
+                  $selected = '';
+              }
+              else{
+                $selected = '';
+              }
+              echo '<option value="'.$key['id'].'">'.$key['name'].'</option>';
+            }               
+?>                                 
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-auto col-sm-6 col-12 flex-grow-1">
+          <div class="form-group">
+            <select class="form-control">
+            <?php
+            $category = [];
+              
+                if(!in_array($array_category['category_id'],$category['category_id'])){
+                $category .= $array_category;
+                }
+foreach($category as $key){
+                
+                $selected = "selected";
+                if($key['id'] != 1){
+                  $selected = '';
+              }
+              else{
+                $selected = '';
+              }
+              echo '<option value="'.$key['id'].'">'.$key['job'].'</option>';
+            }
+                         
+?>   
+             
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-auto col-sm-6 col-12 flex-grow-1">
+          <div class="form-group">
+            <button type="button" class="btn-form-search"><i class="icofont-search-1"></i></button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
                 </div>
               </div>
             </div>
@@ -105,16 +102,8 @@ include_once("header.php");
           </div>
         </div>
       </div>
-      <div class="home-slider-shape">
-        <!-- <img class="shape1" data-aos="fade-down" data-aos-duration="1500" src="#" width="270" height="234" >
-        <img class="shape2" data-aos="fade-left" data-aos-duration="2000" src="#" width="201" height="346" >
-        <img class="shape3" data-aos="fade-right" data-aos-duration="2000" src="#" width="276" height="432" >
-        <img class="shape4" data-aos="flip-left" data-aos-duration="1500" src="#" width="127" height="121" > -->
-      </div>
     </section>
-    <!--== End Hero Area Wrapper ==-->
 
-    <!--== Start Job Category Area Wrapper ==-->
     <section class="job-category-area">
       <div class="container" data-aos="fade-down">
         <div class="row">
@@ -183,9 +172,9 @@ foreach($array_category as $key1){
     <div class="recent-job-info">
       <div class="salary">
         <h4>'.$key1['price'].'</h4>
-        <p>/'.$key1['workingtime'].'</p>
+        <p>/'.$key1['working_hour_1'].'</p>
       </div>
-      <a class="btn-theme btn-sm" href="job-details.php">Apply Now</a>
+      <a class="btn-theme btn-sm" href="job-details.php?id%20='.$key1['id'].' ">Apply Now</a>
     </div>
   </div>
 </div>';
@@ -213,85 +202,33 @@ foreach($array_category as $key1){
         <div class="row">
           <div class="col-12">
             <div class="working-process-content-wrap">
-              <div class="working-col">
-                <!--== Start Work Process ==-->
-                <div class="working-process-item">
-                  <div class="icon-box">
-                    <div class="inner">
-                      <img class="icon-img" src="assets/img/icons/w1.png" alt="Image-HasTech">
-                      <img class="icon-hover" src="assets/img/icons/w1-hover.png" alt="Image-HasTech">
-                    </div>
-                  </div>
-                  <div class="content">
-                    <h4 class="title">Create an Account</h4>
-                    <p class="desc">It is long established fact reader distracted readable content</p>
-                  </div>
-                  <div class="shape-arrow-icon">
-                    <img class="shape-icon" src="assets/img/icons/right-arrow.png" alt="Image-HasTech">
-                    <img class="shape-icon-hover" src="assets/img/icons/right-arrow2.png" alt="Image-HasTech">
-                  </div>
-                </div>
-                <!--== End Work Process ==-->
-              </div>
-              <div class="working-col">
-                <!--== Start Work Process ==-->
-                <div class="working-process-item">
-                  <div class="icon-box">
-                    <div class="inner">
-                      <img class="icon-img" src="assets/img/icons/w2.png" alt="Image-HasTech">
-                      <img class="icon-hover" src="assets/img/icons/w2-hover.png" alt="Image-HasTech">
-                    </div>
-                  </div>
-                  <div class="content">
-                    <h4 class="title">CV/Resume</h4>
-                    <p class="desc">It is long established fact reader distracted readable content</p>
-                  </div>
-                  <div class="shape-arrow-icon">
-                    <img class="shape-icon" src="assets/img/icons/right-arrow.png" alt="Image-HasTech">
-                    <img class="shape-icon-hover" src="assets/img/icons/right-arrow2.png" alt="Image-HasTech">
-                  </div>
-                </div>
-                <!--== End Work Process ==-->
-              </div>
-              <div class="working-col">
-                <!--== Start Work Process ==-->
-                <div class="working-process-item">
-                  <div class="icon-box">
-                    <div class="inner">
-                      <img class="icon-img" src="assets/img/icons/w3.png" alt="Image-HasTech">
-                      <img class="icon-hover" src="assets/img/icons/w3-hover.png" alt="Image-HasTech">
-                    </div>
-                  </div>
-                  <div class="content">
-                    <h4 class="title">Find Your Job</h4>
-                    <p class="desc">It is long established fact reader distracted readable content</p>
-                  </div>
-                  <div class="shape-arrow-icon">
-                    <img class="shape-icon" src="assets/img/icons/right-arrow.png" alt="Image-HasTech">
-                    <img class="shape-icon-hover" src="assets/img/icons/right-arrow2.png" alt="Image-HasTech">
-                  </div>
-                </div>
-                <!--== End Work Process ==-->
-              </div>
-              <div class="working-col">
-                <!--== Start Work Process ==-->
-                <div class="working-process-item">
-                  <div class="icon-box">
-                    <div class="inner">
-                      <img class="icon-img" src="assets/img/icons/w4.png" alt="Image-HasTech">
-                      <img class="icon-hover" src="assets/img/icons/w4-hover.png" alt="Image-HasTech">
-                    </div>
-                  </div>
-                  <div class="content">
-                    <h4 class="title">Save & Apply</h4>
-                    <p class="desc">It is long established fact reader distracted readable content</p>
-                  </div>
-                  <div class="shape-arrow-icon d-none">
-                    <img class="shape-icon" src="assets/img/icons/right-arrow.png" alt="Image-HasTech">
-                    <img class="shape-icon-hover" src="assets/img/icons/right-arrow2.png" alt="Image-HasTech">
-                  </div>
-                </div>
-                <!--== End Work Process ==-->
+<?php
+foreach($array_1 as $key){
+  echo ' <div class="working-col">
+  <div class="working-process-item">
+    <div class="icon-box">
+      <div class="inner">
+        <img class="icon-img" src="'.$key['icon_1'].'" alt="Image-HasTech">
+        <img class="icon-hover" src="'.$key['icon_2'].'" alt="Image-HasTech">
+      </div>
+    </div>
+    <div class="content">
+      <h4 class="title">'.$key['title'].'</h4>
+      <p class="desc">'.$key['desc'].'</p>
+    </div>
+    <div class="shape-arrow-icon">
+      <img class="shape-icon" src="'.$key['img_1'].'" alt="Image-HasTech">
+      <img class="shape-icon-hover" src="'.$key['img_2'].'" alt="Image-HasTech">
+    </div>
+  </div>
+  </div>
+  ';
+}
+?>
+            
+             
+              
+              </div>  
               </div>
             </div>
           </div>
@@ -339,110 +276,34 @@ foreach($array_category as $key1){
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-6 col-lg-4 col-xl-3">
-            <!--== Start Team Item ==-->
-            <div class="team-item">
-              <div class="thumb">
-                <a href="candidate-details.php">
-                  <img src="assets/img/team/1.jpg" width="160" height="160" alt="Image-HasTech">
-                </a>
-              </div>
-              <div class="content">
-                <h4 class="title"><a href="candidate-details.php">Lauran Benitez</a></h4>
-                <h5 class="sub-title">Web Designer</h5>
-                <div class="rating-box">
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                </div>
-                <p class="desc">CSS3, HTML5, Javascript Bootstrap, Jquery</p>
-                <a class="btn-theme btn-white btn-sm" href="candidate-details.php">View Profile</a>
-              </div>
-              <div class="bookmark-icon"><img src="assets/img/icons/bookmark1.png" alt="Image-HasTech"></div>
-              <div class="bookmark-icon-hover"><img src="assets/img/icons/bookmark2.png" alt="Image-HasTech"></div>
-            </div>
-            <!--== End Team Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-4 col-xl-3">
-            <!--== Start Team Item ==-->
-            <div class="team-item">
-              <div class="thumb">
-                <a href="candidate-details.php">
-                  <img src="assets/img/team/2.jpg" width="160" height="160" alt="Image-HasTech">
-                </a>
-              </div>
-              <div class="content">
-                <h4 class="title"><a href="candidate-details.php">Valentine Anders</a></h4>
-                <h5 class="sub-title">UI/UX Designer</h5>
-                <div class="rating-box">
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                </div>
-                <p class="desc">CSS3, HTML5, Javascript Bootstrap, Jquery</p>
-                <a class="btn-theme btn-white btn-sm" href="candidate-details.php">View Profile</a>
-              </div>
-              <div class="bookmark-icon"><img src="assets/img/icons/bookmark1.png" alt="Image-HasTech"></div>
-              <div class="bookmark-icon-hover"><img src="assets/img/icons/bookmark2.png" alt="Image-HasTech"></div>
-            </div>
-            <!--== End Team Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-4 col-xl-3">
-            <!--== Start Team Item ==-->
-            <div class="team-item">
-              <div class="thumb">
-                <a href="candidate-details.php">
-                  <img src="assets/img/team/3.jpg" width="160" height="160" alt="Image-HasTech">
-                </a>
-              </div>
-              <div class="content">
-                <h4 class="title"><a href="candidate-details.php">Shakia Aguilera</a></h4>
-                <h5 class="sub-title">Web Designer</h5>
-                <div class="rating-box">
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                </div>
-                <p class="desc">CSS3, HTML5, Javascript Bootstrap, Jquery</p>
-                <a class="btn-theme btn-white btn-sm" href="candidate-details.php">View Profile</a>
-              </div>
-              <div class="bookmark-icon"><img src="assets/img/icons/bookmark1.png" alt="Image-HasTech"></div>
-              <div class="bookmark-icon-hover"><img src="assets/img/icons/bookmark2.png" alt="Image-HasTech"></div>
-            </div>
-            <!--== End Team Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-4 col-xl-3">
-            <!--== Start Team Item ==-->
-            <div class="team-item">
-              <div class="thumb">
-                <a href="candidate-details.php">
-                  <img src="assets/img/team/4.jpg" width="160" height="160" alt="Image-HasTech">
-                </a>
-              </div>
-              <div class="content">
-                <h4 class="title"><a href="candidate-details.php">Assunta Manson</a></h4>
-                <h5 class="sub-title">App. Developer</h5>
-                <div class="rating-box">
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                  <i class="icofont-star"></i>
-                </div>
-                <p class="desc">CSS3, HTML5, Javascript Bootstrap, Jquery</p>
-                <a class="btn-theme btn-white btn-sm" href="candidate-details.php">View Profile</a>
-              </div>
-              <div class="bookmark-icon"><img src="assets/img/icons/bookmark1.png" alt="Image-HasTech"></div>
-              <div class="bookmark-icon-hover"><img src="assets/img/icons/bookmark2.png" alt="Image-HasTech"></div>
-            </div>
-            <!--== End Team Item ==-->
-          </div>
+         <?php 
+         foreach($array_2 as $key){
+           echo '<div class="col-sm-6 col-lg-4 col-xl-3">
+           <div class="team-item">
+             <div class="thumb">
+               <a href="candidate-details.php">
+                 <img src="'.$key['img'].'" width="160" height="160" alt="Image-HasTech">
+               </a>
+             </div>
+             <div class="content">
+               <h4 class="title"><a href="candidate-details.php">'.$key['name'].'</a></h4>
+               <h5 class="sub-title">'.$key['job'].'</h5>
+               <div class="rating-box">';
+               for($i=0; $i<$key['mark']; $i++){
+                 echo '<i class="icofont-star"></i>';
+               }
+                 
+                
+               echo '</div>
+               <p class="desc">'.$key['language_'].'</p>
+               <a class="btn-theme btn-white btn-sm" href="candidate-details.php">View Profile</a>
+             </div>
+             <div class="bookmark-icon"><img src="assets/img/icons/bookmark1.png" alt="Image-HasTech"></div>
+             <div class="bookmark-icon-hover"><img src="assets/img/icons/bookmark2.png" alt="Image-HasTech"></div>
+           </div>
+         </div> ';
+         }?>
+          
         </div>
       </div>
     </section>
@@ -456,55 +317,16 @@ foreach($array_category as $key1){
             <div class="brand-logo-content" >
               <div class="swiper brand-logo-slider-container">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <img src="assets/img/brand-logo/1.png" alt="Image-HasTech">
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <img src="assets/img/brand-logo/2.png" alt="Image-HasTech">
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <img src="assets/img/brand-logo/3.png" alt="Image-HasTech">
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <img src="assets/img/brand-logo/4.png" alt="Image-HasTech">
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <img src="assets/img/brand-logo/5.png" alt="Image-HasTech">
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <img src="assets/img/brand-logo/6.png" alt="Image-HasTech">
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <img src="assets/img/brand-logo/1.png" alt="Image-HasTech">
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
+                 
+                <?php
+foreach($array_3 as $key){
+  echo '<div class="swiper-slide">  
+  <div class="brand-logo-item">
+    <img src="'.$key['img'].'" alt="Image-HasTech">
+  </div>
+</div>';
+}
+                ?>
                 </div>
               </div>
               <!--== Add Swiper Arrows ==-->
@@ -540,159 +362,51 @@ foreach($array_category as $key1){
           <div class="col-12">
             <div class="swiper testi-slider-container">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <!--== Start Testimonial Item ==-->
-                  <div class="testimonial-item">
-                    <div class="testi-inner-content">
-                      <div class="testi-author">
-                        <div class="testi-thumb">
-                          <img src="assets/img/testimonial/1.jpg" width="75" height="75" alt="Image-HasTech">
-                        </div>
-                        <div class="testi-info">
-                          <h4 class="name">Roselia Hamets</h4>
-                          <span class="designation">Hiring Manager</span>
-                        </div>
-                      </div>
-                      <div class="testi-content">
-                        <p class="desc">It is a long established fact that reader will distracted the readable content page looking at its layout point using that has more-or-less normal distribution of letters opposed using content making.</p>
-                        <div class="rating-box">
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                        </div>
-                        <div class="testi-quote"><img src="assets/img/icons/quote1.png" alt="Image-HasTech"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--== End Testimonial Item ==-->
-                </div>
-                <div class="swiper-slide">
-                  <!--== Start Testimonial Item ==-->
-                  <div class="testimonial-item">
-                    <div class="testi-inner-content">
-                      <div class="testi-author">
-                        <div class="testi-thumb">
-                          <img src="assets/img/testimonial/2.jpg" width="75" height="75" alt="Image-HasTech">
-                        </div>
-                        <div class="testi-info">
-                          <h4 class="name">Assunta Manson</h4>
-                          <span class="designation">Hiring Manager</span>
-                        </div>
-                      </div>
-                      <div class="testi-content">
-                        <p class="desc">It is a long established fact that reader will distracted the readable content page looking at its layout point using that has more-or-less normal distribution of letters opposed using content making.</p>
-                        <div class="rating-box">
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                        </div>
-                        <div class="testi-quote"><img src="assets/img/icons/quote1.png" alt="Image-HasTech"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--== End Testimonial Item ==-->
-                </div>
-                <div class="swiper-slide">
-                  <!--== Start Testimonial Item ==-->
-                  <div class="testimonial-item">
-                    <div class="testi-inner-content">
-                      <div class="testi-author">
-                        <div class="testi-thumb">
-                          <img src="assets/img/testimonial/3.jpg" width="75" height="75" alt="Image-HasTech">
-                        </div>
-                        <div class="testi-info">
-                          <h4 class="name">Amira Shepard</h4>
-                          <span class="designation">Hiring Manager</span>
-                        </div>
-                      </div>
-                      <div class="testi-content">
-                        <p class="desc">It is a long established fact that reader will distracted the readable content page looking at its layout point using that has more-or-less normal distribution of letters opposed using content making.</p>
-                        <div class="rating-box">
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                        </div>
-                        <div class="testi-quote"><img src="assets/img/icons/quote1.png" alt="Image-HasTech"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--== End Testimonial Item ==-->
-                </div>
-                <div class="swiper-slide">
-                  <!--== Start Testimonial Item ==-->
-                  <div class="testimonial-item">
-                    <div class="testi-inner-content">
-                      <div class="testi-author">
-                        <div class="testi-thumb">
-                          <img src="assets/img/testimonial/4.jpg" width="75" height="75" alt="Image-HasTech">
-                        </div>
-                        <div class="testi-info">
-                          <h4 class="name">Joshua George</h4>
-                          <span class="designation">Hiring Manager</span>
-                        </div>
-                      </div>
-                      <div class="testi-content">
-                        <p class="desc">It is a long established fact that reader will distracted the readable content page looking at its layout point using that has more-or-less normal distribution of letters opposed using content making.</p>
-                        <div class="rating-box">
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                        </div>
-                        <div class="testi-quote"><img src="assets/img/icons/quote1.png" alt="Image-HasTech"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--== End Testimonial Item ==-->
-                </div>
-                <div class="swiper-slide">
-                  <!--== Start Testimonial Item ==-->
-                  <div class="testimonial-item">
-                    <div class="testi-inner-content">
-                      <div class="testi-author">
-                        <div class="testi-thumb">
-                          <img src="assets/img/testimonial/5.jpg" width="75" height="75" alt="Image-HasTech">
-                        </div>
-                        <div class="testi-info">
-                          <h4 class="name">Rosie Patton</h4>
-                          <span class="designation">Hiring Manager</span>
-                        </div>
-                      </div>
-                      <div class="testi-content">
-                        <p class="desc">It is a long established fact that reader will distracted the readable content page looking at its layout point using that has more-or-less normal distribution of letters opposed using content making.</p>
-                        <div class="rating-box">
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                          <i class="icofont-star"></i>
-                        </div>
-                        <div class="testi-quote"><img src="assets/img/icons/quote1.png" alt="Image-HasTech"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--== End Testimonial Item ==-->
-                </div>
+                <?php
+
+foreach($array_4 as $key){
+  echo '<div class="swiper-slide">
+  <div class="testimonial-item">
+    <div class="testi-inner-content">
+      <div class="testi-author">
+        <div class="testi-thumb">
+          <img src="'.$key['img'].'" width="75" height="75" alt="Image-HasTech">
+        </div>
+        <div class="testi-info">
+          <h4 class="name">'.$key['name'].'</h4>
+          <span class="designation">'.$key['job'].'</span>
+        </div>
+      </div>
+      <div class="testi-content">
+        <p class="desc">'.$key['desc'].'</p>
+        <div class="rating-box">';
+        for($i=0; $i<$key['mark'];$i++){
+          echo ' <i class="icofont-star"></i>';
+        }
+         
+         
+        echo '</div>
+        <div class="testi-quote"><img src="assets/img/icons/quote1.png" alt="Image-HasTech"></div>
+      </div>
+    </div>
+  </div>
+</div> ';
+}
+?>
+                
               </div>
 
-              <!--== Add Swiper Pagination ==-->
+          
               <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!--== End Testimonial Area Wrapper ==-->
+  
 
-    <!--== Start Blog Area Wrapper ==-->
-    <section class="blog-area blog-home-area">
+<!--    
+   <section class="blog-area blog-home-area">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -706,7 +420,7 @@ foreach($array_category as $key1){
         </div>
         <div class="row align-items-center post-home-style row-gutter-40">
           <div class="col-md-6 col-lg-4" data-aos="fade-right">
-            <!--== Start Blog Post Item ==-->
+ 
             <div class="post-item">
               <div class="thumb">
                 <a href="blog-details.php"><img src="assets/img/blog/1.jpg" alt="Image" width="370" height="270"></a>
@@ -721,20 +435,16 @@ foreach($array_category as $key1){
                 </div>
               </div>
             </div>
-            <!--== End Blog Post Item ==-->
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-left">
-            <!--== Start Blog Post Item ==-->
             <div class="post-item">
               <div class="thumb mb--0">
                 <a href="blog-details.php"><img src="assets/img/blog/h1.jpg" alt="Image" width="370" height="440"></a>
               </div>
             </div>
-            <!--== End Blog Post Item ==-->
           </div>
           <div class="col-lg-4" data-aos="fade-left">
             <div class="post-home-list-style">
-              <!--== Start Blog Post Item ==-->
               <div class="post-item">
                 <div class="content">
                   <div class="author">By <a href="blog.php">Walter Houston</a></div>
@@ -746,9 +456,6 @@ foreach($array_category as $key1){
                   </div>
                 </div>
               </div>
-              <!--== End Blog Post Item ==-->
-
-              <!--== Start Blog Post Item ==-->
               <div class="post-item">
                 <div class="content">
                   <div class="author">By <a href="blog.php">Walter Houston</a></div>
@@ -760,13 +467,12 @@ foreach($array_category as $key1){
                   </div>
                 </div>
               </div>
-              <!--== End Blog Post Item ==-->
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!--== End Blog Area Wrapper ==-->
+    </section>  -->
+   
   </main>
 <?php
 include_once('footer.php');

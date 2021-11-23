@@ -48,7 +48,7 @@
           <div class="header-align">
             <div class="header-align-start">
               <div class="header-logo-area">
-                <a href="index.html">
+                <a href="index.php">
                   <img class="logo-main" src="assets/img/logo-light.png" alt="Logo" />
                   <img class="logo-light" src="assets/img/logo-light.png" alt="Logo" />
                 </a>
@@ -57,43 +57,43 @@
             <div class="header-align-center">
               <div class="header-navigation-area position-relative">
                 <ul class="main-menu nav">
-                  <li><a href="index.html"><span>Home</span></a></li>
+                  <li><a href="index.php"><span>Home</span></a></li>
                   <li class="has-submenu"><a href="#/"><span>Find Jobs</span></a>
                     <ul class="submenu-nav">
-                      <li><a href="job.html"><span>Jobs</span></a></li>
-                      <li><a href="job-details.html"><span>Job Details</span></a></li>
+                      <li><a href="job.php"><span>Jobs</span></a></li>
+                      <li><a href="job-details.php"><span>Job Details</span></a></li>
                     </ul>
                   </li>
-                  <li><a href="employers-details.html"><span>Employers Details</span></a></li>
+                  <li><a href="employers-details.php"><span>Employers Details</span></a></li>
                   <li class="has-submenu"><a href="#/"><span>Candidates</span></a>
                     <ul class="submenu-nav">
-                      <li><a href="candidate.html"><span>Candidates</span></a></li>
-                      <li><a href="candidate-details.html"><span>Candidate Details</span></a></li>
+                      <li><a href="candidate.php"><span>Candidates</span></a></li>
+                      <li><a href="candidate-details.php"><span>Candidate Details</span></a></li>
                     </ul>
                   </li>
                   <li class="has-submenu"><a href="#/"><span>Blog</span></a>
                     <ul class="submenu-nav">
-                      <li><a href="blog-grid.html">Blog Grid</a></li>
-                      <li><a href="blog.html">Blog Left Sidebar</a></li>
-                      <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                      <li><a href="blog-details.html">Blog Details</a></li>
+                      <li><a href="blog-grid.php">Blog Grid</a></li>
+                      <li><a href="blog.php">Blog Left Sidebar</a></li>
+                      <li><a href="blog-right-sidebar.php">Blog Right Sidebar</a></li>
+                      <li><a href="blog-details.php">Blog Details</a></li>
                     </ul>
                   </li>
                   <li class="has-submenu"><a href="#/"><span>Pages</span></a>
                     <ul class="submenu-nav">
-                      <li><a href="about-us.html"><span>About us</span></a></li>
-                      <li><a href="login.html"><span>Login</span></a></li>
-                      <li><a href="registration.html"><span>Registration</span></a></li>
-                      <li><a href="page-not-found.html"><span>Page Not Found</span></a></li>
+                      <li><a href="about-us.php"><span>About us</span></a></li>
+                      <li><a href="login.php"><span>Login</span></a></li>
+                      <li><a href="registration.php"><span>Registration</span></a></li>
+                      <li><a href="page-not-found.php"><span>Page Not Found</span></a></li>
                     </ul>
                   </li>
-                  <li><a href="contact.html"><span>Contact</span></a></li>
+                  <li><a href="contact.php"><span>Contact</span></a></li>
                 </ul>
               </div>
             </div>
             <div class="header-align-end">
               <div class="header-action-area">
-                <a class="btn-registration" href="registration.html"><span>+</span> Registration</a>
+                <a class="btn-registration" href="registration.php"><span>+</span> Registration</a>
                 <button class="btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasMenu" aria-controls="AsideOffcanvasMenu">
                   <i class="icofont-navigation-menu"></i>
                 </button>
@@ -116,7 +116,7 @@
               <h2 class="title">Blog Details</h2>
               <nav class="breadcrumb-area">
                 <ul class="breadcrumb justify-content-center">
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="index.php">Home</a></li>
                   <li class="breadcrumb-sep">//</li>
                   <li>Blog Details</li>
                 </ul>
@@ -136,7 +136,7 @@
             <div class="col-12">
               <div class="post-details-info text-center">
                 <div class="meta">
-                  <span class="author">By <a href="blog.html">Harold Leonard</a></span>
+                  <span class="author">By <a href="blog.php">Harold Leonard</a></span>
                   <span class="dots"></span>
                   <span class="post-date">03 April, 21 </span>
                   <span class="dots"></span>
@@ -145,10 +145,10 @@
                 <h4 class="title">Simple pricing structure you have the flexibility to be able to grow your business in an effective.</h4>
                 <div class="widget-tags">
                   <ul>
-                    <li><a href="blog.html">Agency</a></li>
-                    <li><a class="active" href="blog.html">Circular</a></li>
-                    <li><a href="blog.html">Business</a></li>
-                    <li><a href="blog.html">Corporate</a></li>
+                    <li><a href="blog.php">Agency</a></li>
+                    <li><a class="active" href="blog.php">Circular</a></li>
+                    <li><a href="blog.php">Business</a></li>
+                    <li><a href="blog.php">Corporate</a></li>
                   </ul>
                 </div>
               </div>
@@ -165,19 +165,19 @@
                   <h4 class="title">Table of Content:</h4>
                   <ul class="list-style">
                     <li>
-                      <a href="blog-details.html"><i class="icofont-double-right"></i>It was popularised in the 1960s with the release of Letraset sheets containing</a>
+                      <a href="blog-details.php"><i class="icofont-double-right"></i>It was popularised in the 1960s with the release of Letraset sheets containing</a>
                     </li>
                     <li>
-                      <a href="blog-details.html"><i class="icofont-double-right"></i> Many desktop publishing packages and web page editors now use</a>
+                      <a href="blog-details.php"><i class="icofont-double-right"></i> Many desktop publishing packages and web page editors now use</a>
                     </li>
                     <li>
-                      <a href="blog-details.html"><i class="icofont-double-right"></i> It was popularised in the 1960s with the release of Letraset sheets containing</a>
+                      <a href="blog-details.php"><i class="icofont-double-right"></i> It was popularised in the 1960s with the release of Letraset sheets containing</a>
                     </li>
                     <li>
-                      <a href="blog-details.html"><i class="icofont-double-right"></i> Many desktop publishing packages and web page editors now use</a>
+                      <a href="blog-details.php"><i class="icofont-double-right"></i> Many desktop publishing packages and web page editors now use</a>
                     </li>
                     <li>
-                      <a href="blog-details.html"><i class="icofont-double-right"></i> It was popularised in the 1960s with the release of Letraset sheets containing</a>
+                      <a href="blog-details.php"><i class="icofont-double-right"></i> It was popularised in the 1960s with the release of Letraset sheets containing</a>
                     </li>
                   </ul>
                 </div>
@@ -241,13 +241,13 @@
                       <!--== Start Blog Post Item ==-->
                       <div class="post-item2">
                         <div class="thumb">
-                          <a href="blog-details.html">
+                          <a href="blog-details.php">
                             <img src="assets/img/blog/10.jpg" alt="Image" width="350" height="270">
                           </a>
                         </div>
                         <div class="content">
-                          <h5 class="author">By <a href="blog.html">Walter Houston</a></h5>
-                          <h4 class="title"><a href="blog-details.html">Why wild animal welfare in addition to farmed animal...</a></h4>
+                          <h5 class="author">By <a href="blog.php">Walter Houston</a></h5>
+                          <h4 class="title"><a href="blog-details.php">Why wild animal welfare in addition to farmed animal...</a></h4>
                           <div class="meta">
                             <span class="post-date">03 April, 2021</span>
                             <span class="dots"></span>
@@ -261,13 +261,13 @@
                       <!--== Start Blog Post Item ==-->
                       <div class="post-item2">
                         <div class="thumb">
-                          <a href="blog-details.html">
+                          <a href="blog-details.php">
                             <img src="assets/img/blog/11.jpg" alt="Image" width="350" height="270">
                           </a>
                         </div>
                         <div class="content">
-                          <h5 class="author">By <a href="blog.html">Walter Houston</a></h5>
-                          <h4 class="title"><a href="blog-details.html">Organizations and individual advocates around the world...</a></h4>
+                          <h5 class="author">By <a href="blog.php">Walter Houston</a></h5>
+                          <h4 class="title"><a href="blog-details.php">Organizations and individual advocates around the world...</a></h4>
                           <div class="meta">
                             <span class="post-date">03 April, 2021</span>
                             <span class="dots"></span>
@@ -281,13 +281,13 @@
                       <!--== Start Blog Post Item ==-->
                       <div class="post-item2">
                         <div class="thumb">
-                          <a href="blog-details.html">
+                          <a href="blog-details.php">
                             <img src="assets/img/blog/12.jpg" alt="Image" width="350" height="270">
                           </a>
                         </div>
                         <div class="content">
-                          <h5 class="author">By <a href="blog.html">Walter Houston</a></h5>
-                          <h4 class="title"><a href="blog-details.html">It is not currently possible for us to have a good sense.</a></h4>
+                          <h5 class="author">By <a href="blog.php">Walter Houston</a></h5>
+                          <h4 class="title"><a href="blog-details.php">It is not currently possible for us to have a good sense.</a></h4>
                           <div class="meta">
                             <span class="post-date">03 April, 2021</span>
                             <span class="dots"></span>
@@ -301,13 +301,13 @@
                       <!--== Start Blog Post Item ==-->
                       <div class="post-item2">
                         <div class="thumb">
-                          <a href="blog-details.html">
+                          <a href="blog-details.php">
                             <img src="assets/img/blog/3.jpg" alt="Image" width="350" height="270">
                           </a>
                         </div>
                         <div class="content">
-                          <h5 class="author">By <a href="blog.html">Walter Houston</a></h5>
-                          <h4 class="title"><a href="blog-details.html">Why wild animal welfare in addition to farmed animal...</a></h4>
+                          <h5 class="author">By <a href="blog.php">Walter Houston</a></h5>
+                          <h4 class="title"><a href="blog-details.php">Why wild animal welfare in addition to farmed animal...</a></h4>
                           <div class="meta">
                             <span class="post-date">03 April, 2021</span>
                             <span class="dots"></span>
@@ -444,7 +444,7 @@
           <div class="col-md-6 col-lg-3">
             <div class="widget-item widget-about">
               <div class="widget-logo-area">
-                <a href="index.html">
+                <a href="index.php">
                   <img class="logo-main" src="assets/img/logo-light-theme.png" alt="Logo" />
                 </a>
               </div>
@@ -466,10 +466,10 @@
                     <div class="collapse-body">
                       <div class="widget-menu-wrap">
                         <ul class="nav-menu">
-                          <li><a href="about-us.html">About Us</a></li>
-                          <li><a href="about-us.html">Why Extobot</a></li>
-                          <li><a href="contact.html">Contact With Us</a></li>
-                          <li><a href="contact.html">Our Partners</a></li>
+                          <li><a href="about-us.php">About Us</a></li>
+                          <li><a href="about-us.php">Why Extobot</a></li>
+                          <li><a href="contact.php">Contact With Us</a></li>
+                          <li><a href="contact.php">Our Partners</a></li>
                         </ul>
                       </div>
                     </div>
@@ -484,10 +484,10 @@
                     <div class="collapse-body">
                       <div class="widget-menu-wrap">
                         <ul class="nav-menu">
-                          <li><a href="account-login.html">Quick Links</a></li>
-                          <li><a href="job.html">Job Packages</a></li>
-                          <li><a href="job.html">Post New Job</a></li>
-                          <li><a href="job.html">Jobs Listing</a></li>
+                          <li><a href="account-login.php">Quick Links</a></li>
+                          <li><a href="job.php">Job Packages</a></li>
+                          <li><a href="job.php">Post New Job</a></li>
+                          <li><a href="job.php">Jobs Listing</a></li>
                         </ul>
                       </div>
                     </div>
@@ -502,10 +502,10 @@
                     <div class="collapse-body">
                       <div class="widget-menu-wrap">
                         <ul class="nav-menu">
-                          <li><a href="account-login.html">Affiliate</a></li>
-                          <li><a href="blog.html">Blog</a></li>
-                          <li><a href="account-login.html">Help & Support</a></li>
-                          <li><a href="job.html">Careers</a></li>
+                          <li><a href="account-login.php">Affiliate</a></li>
+                          <li><a href="blog.php">Blog</a></li>
+                          <li><a href="account-login.php">Help & Support</a></li>
+                          <li><a href="job.php">Careers</a></li>
                         </ul>
                       </div>
                     </div>
@@ -520,10 +520,10 @@
                     <div class="collapse-body">
                       <div class="widget-menu-wrap">
                         <ul class="nav-menu">
-                          <li><a href="account-login.html">Star a Trial</a></li>
-                          <li><a href="about-us.html">How It Works</a></li>
-                          <li><a href="account-login.html">Features</a></li>
-                          <li><a href="about-us.html">Price & Planing</a></li>
+                          <li><a href="account-login.php">Star a Trial</a></li>
+                          <li><a href="about-us.php">How It Works</a></li>
+                          <li><a href="account-login.php">Features</a></li>
+                          <li><a href="about-us.php">Price & Planing</a></li>
                         </ul>
                       </div>
                     </div>
@@ -563,37 +563,37 @@
       <!-- Mobile Menu Start -->
       <div class="mobile-menu-items">
         <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li><a href="#">Find Jobs</a>
             <ul class="sub-menu">
-              <li><a href="job.html">Jobs</a></li>
-              <li><a href="job-details.html">Job Details</a></li>
+              <li><a href="job.php">Jobs</a></li>
+              <li><a href="job-details.php">Job Details</a></li>
             </ul>
           </li>
-          <li><a href="employers-details.html">Employers Details</a></li>
+          <li><a href="employers-details.php">Employers Details</a></li>
           <li><a href="#">Candidates</a>
             <ul class="sub-menu">
-              <li><a href="candidate.html">Candidates</a></li>
-              <li><a href="candidate-details.html">Candidate Details</a></li>
+              <li><a href="candidate.php">Candidates</a></li>
+              <li><a href="candidate-details.php">Candidate Details</a></li>
             </ul>
           </li>
           <li><a href="#">Blog</a>
             <ul class="sub-menu">
-              <li><a href="blog-grid.html">Blog Grid</a></li>
-              <li><a href="blog.html">Blog Left Sidebar</a></li>
-              <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-              <li><a href="blog-details.html">Blog Details</a></li>
+              <li><a href="blog-grid.php">Blog Grid</a></li>
+              <li><a href="blog.php">Blog Left Sidebar</a></li>
+              <li><a href="blog-right-sidebar.php">Blog Right Sidebar</a></li>
+              <li><a href="blog-details.php">Blog Details</a></li>
             </ul>
           </li>
           <li><a href="#">Pages</a>
             <ul class="sub-menu">
-              <li><a href="about-us.html">About us</a></li>
-              <li><a href="login.html">Login</a></li>
-              <li><a href="registration.html">Registration</a></li>
-              <li><a href="page-not-found.html">Page Not Found</a></li>
+              <li><a href="about-us.php">About us</a></li>
+              <li><a href="login.php">Login</a></li>
+              <li><a href="registration.php">Registration</a></li>
+              <li><a href="page-not-found.php">Page Not Found</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
       </div>
       <!-- Mobile Menu End -->
