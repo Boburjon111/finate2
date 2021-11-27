@@ -21,6 +21,10 @@ $array_city[] = $row2;
 
 
 $category_zapros = "SELECT * FROM `category` WHERE status='1'";
+if(isset($_GET['id'])){
+  $job_id = $_GET['id'];
+  $category_zapros.= "AND `id` =".$job_id;
+}
 $category_result = mysqli_query($connect, $category_zapros);
 
 $array_category = [];
@@ -96,8 +100,27 @@ while($row = mysqli_fetch_assoc($about_res)){
 
 
 
+$employer_zapros = "SELECT * FROM `employer` WHERE status='1'";
+if(isset($_GET['category_id'])){
+  $employer_id = $_GET['category_id'];
+  $employer_zapros.= "AND `id` =".$employer_id;
+}else{
+  $employer_id = 1;
+  $employer_zapros.= "AND `id` =".$employer_id;
+}
+$employer_result = mysqli_query($connect, $employer_zapros);
+$employer_category = [];
+while($row3 = mysqli_fetch_assoc($employer_result)){
+$employer_category[] = $row3;
+}
 
+$mysqli_contact = "SELECT * FROM `contact` WHERE status='1'";
+$contact_res = mysqli_query($connect, $mysqli_contact);
+$array_8 = [];
 
+while($row = mysqli_fetch_assoc($contact_res)){
+  $array_8[] = $row;
+}
 
 
 ?>

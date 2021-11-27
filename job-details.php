@@ -36,8 +36,8 @@ include_once('header.php');
                   <img src="'.$key['image'].'" width="130" height="130" alt="Image-HasTech">
                 </div>
                 <div class="content">
-                  <h4 class="title"></h4>
-                  <h5 class="sub-title">'.$key['name'].'</h5>
+                  <h4 class="title"><a href="employers-details.php?category_id='.$key['category_id'].'">'.$key['name'].'</h4></a>
+                  <h5 class="sub-title"></h5>
                   <ul class="info-list">
                     <li><i class="icofont-location-pin"></i>'.$key['adress'].'</li>
                     <li><i class="icofont-phone"></i>'.$key['phone'].'</li>
@@ -45,7 +45,7 @@ include_once('header.php');
                 </div>
               </div>
               <div class="job-details-price">
-                <h4 class="title">'.$key['price'].'<span>/monthly</span></h4>
+                <h4 class="title">$'.$key['price'].'<p>/'.$key['working_time'].'</p></h4>
                 <button type="button" class="btn-theme">Apply Now</button>
               </div>
             </div>

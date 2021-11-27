@@ -53,23 +53,11 @@ include_once("header.php");
           <div class="form-group">
             <select class="form-control">
             <?php
-            $category = [];
-              
-                if(!in_array($array_category['category_id'],$category['category_id'])){
-                $category .= $array_category;
-                }
-foreach($category as $key){
-                
-                $selected = "selected";
-                if($key['id'] != 1){
-                  $selected = '';
-              }
-              else{
-                $selected = '';
-              }
-              echo '<option value="'.$key['id'].'">'.$key['job'].'</option>';
-            }
-                         
+foreach ($array_category
+ as $key => $value) {
+  # code...
+}
+                   echo '<option value="'.$key['category_id'].'">'.$key['job'].'</option>';         
 ?>   
              
             </select>
@@ -160,7 +148,7 @@ foreach($array_category as $key1){
         <a href="#"><img src="'.$key1['image'].'" width="75" height="75" alt="Image-HasTech"></a>
       </div>
       <div class="content">
-        <h4 class="name"><a href="#">'.$key1['name'].'</a></h4>
+        <h4 class="name"><a href="employers-details.php?category_id='.$key1['category_id'].'">'.$key1['name'].'</a></h4>
         <p class="address">'.$key1['adress'].'</p>
       </div>
     </div>
@@ -172,9 +160,9 @@ foreach($array_category as $key1){
     <div class="recent-job-info">
       <div class="salary">
         <h4>'.$key1['price'].'</h4>
-        <p>/'.$key1['working_hour_1'].'</p>
+        <p>/'.$key1['working_time'].'</p>
       </div>
-      <a class="btn-theme btn-sm" href="job-details.php?id%20='.$key1['id'].' ">Apply Now</a>
+      <a class="btn-theme btn-sm" href="job-details.php?id='.$key1['id'].' ">Apply Now</a>
     </div>
   </div>
 </div>';

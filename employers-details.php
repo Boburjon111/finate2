@@ -35,10 +35,12 @@ include_once("header.php");
                   <img src="assets/img/companies/11.jpg" width="130" height="130" alt="Image-HasTech">
                 </div>
                 <div class="content">
-                  <h4 class="title">Mukianso IT Sulution Ltd.</h4>
+                  <?php
+                  foreach($employer_category as $key){
+                    echo '<h4 class="title">'.$key['name'].'</h4>
                   <ul class="info-list">
-                    <li><i class="icofont-location-pin"></i> New York, USA</li>
-                    <li><i class="icofont-phone"></i> +88 456 796 457</li>
+                    <li><i class="icofont-location-pin"></i>'.$key['Location'].'</li>
+                    <li><i class="icofont-phone"></i>'.$key['phone'].'</li>
                   </ul>
                   <button type="button" class="btn-theme">Follow Us</button>
                   <button type="button" class="btn-theme btn-white">Add Review</button>
@@ -46,15 +48,15 @@ include_once("header.php");
               </div>
               <div class="employers-counter">
                 <div class="counter-item">
-                  <h4 class="counter">86</h4>
+                  <h4 class="counter">'.$key['Total Jobs'].'</h4>
                   <h5 class="title">Total jobs</h5>
                 </div>
                 <div class="counter-item">
-                  <h4 class="counter">27</h4>
+                  <h4 class="counter">'.$key['Reviews'].'</h4>
                   <h5 class="title">Review</h5>
                 </div>
                 <div class="counter-item">
-                  <h4 class="counter">452</h4>
+                  <h4 class="counter">'.$key['Views'].'</h4>
                   <h5 class="title">Views</h5>
                 </div>
               </div>
@@ -66,15 +68,18 @@ include_once("header.php");
             <div class="employers-details-item">
               <div class="content">
                 <h4 class="title">About Employers</h4>
-                <p class="desc">It is a long established fact that a reader will be distracted the readable content of page when looking atits layout. The point of using is that has more-or-less normal a distribution of letters, as opposed to usin content publishing packages web page editors. It is a long established fact that a reader will be distracts by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that has look like readable publishing packages and web page editors.</p>
-                <p class="desc">It is a long established fact that a reader will be distracted the readable content of a page when looking atits layout. The point of using is that has more-or-less normal a distribution of letters, as opposed to usin content publishing packages web page editors.</p>
-                <ul class="employers-details-list">
-                  <li><i class="icofont-check"></i> Developing custom themes (WordPress.org & ThemeForest Standards)</li>
-                  <li><i class="icofont-check"></i> Creating reactive website designs</li>
-                  <li><i class="icofont-check"></i> Working under strict deadlines</li>
-                  <li><i class="icofont-check"></i> Develop page speed optimized themes</li>
-                </ul>
-              </div>
+                <p class="desc">'.$key['description'].'</p>
+                <ul class="employers-details-list">';
+                for($i=1;$i<=4;$i++){
+                  echo '<li><i class="icofont-check"></i> '.$key['desc_'.$i.''].'</li>';
+                }
+                  
+                echo '</ul>
+              </div>';}
+                  ?>
+
+
+                  
               <div class="row">
                 <div class="col-12">
                   <div class="content mb--0 pb-2">
@@ -103,9 +108,9 @@ foreach($array_category as $key1){
     <div class="recent-job-info">
       <div class="salary">
         <h4>'.$key1['price'].'</h4>
-        <p>/'.$key1['working_hour_1'].'</p>
+        <p>/'.$key1['working_time'].'</p>
       </div>
-      <a class="btn-theme btn-sm" href="job-details.php?id%20='.$key1['id'].' ">Apply Now</a>
+      <a class="btn-theme btn-sm" href="job-details.php?id='.$key1['id'].' ">Apply Now</a>
     </div>
   </div>
 </div>';
@@ -124,63 +129,68 @@ foreach($array_category as $key1){
                 <div class="summery-info">
                   <table class="table">
                     <tbody>
+                      <?php
+                      foreach($employer_category as $key){
+                      echo '
                       <tr>
                         <td class="table-name">Categories</td>
                         <td class="dotted">:</td>
-                        <td>Design & Software</td>
+                        <td>'.$key['Categories'].'</td>
                       </tr>
                       <tr>
                         <td class="table-name">Since</td>
                         <td class="dotted">:</td>
-                        <td>1996</td>
+                        <td>'.$key['Since'].'</td>
                       </tr>
                       <tr>
                         <td class="table-name">Views</td>
                         <td class="dotted">:</td>
-                        <td>568+</td>
+                        <td>'.$key['Views'].'+</td>
                       </tr>
                       <tr>
                         <td class="table-name">Reviews</td>
                         <td class="dotted">:</td>
-                        <td>(4.8) <span class="rating"></span></td>
+                        <td>('.$key['Reviews'].') <span class="rating"></span></td>
                       </tr>
                       <tr>
                         <td class="table-name">Total Jobs</td>
                         <td class="dotted">:</td>
-                        <td>87+</td>
+                        <td>'.$key['Total Jobs'].'+</td>
                       </tr>
                       <tr>
                         <td class="table-name">Location</td>
                         <td class="dotted">:</td>
-                        <td>New York, USA</td>
+                        <td>'.$key['Location'].'</td>
                       </tr>
                       <tr>
                         <td class="table-name">Team Members</td>
                         <td class="dotted">:</td>
-                        <td>300-500</td>
+                        <td>'.$key['team-members'].'</td>
                       </tr>
                       <tr>
                         <td class="table-name">Job Success</td>
                         <td class="dotted">:</td>
-                        <td>98%</td>
+                        <td>'.$key['job_success'].'%</td>
                       </tr>
                       <tr>
                         <td class="table-name">Phone</td>
                         <td class="dotted">:</td>
-                        <td>+00 568 467 843</td>
+                        <td>+'.$key['phone'].'</td>
                       </tr>
                       <tr>
                         <td class="table-name">Email</td>
                         <td class="dotted">:</td>
-                        <td>yourmail@gmail.com</td>
+                        <td>'.$key['email'].'</td>
                       </tr>
                       <tr>
                         <td class="table-name">Website</td>
                         <td class="dotted">:</td>
-                        <td data-text-color="#ff6000">www.website.com</td>
-                      </tr>
+                        <td data-text-color="#ff6000">'.$key['website'].'</td>
+                      </tr>';}
+                      ?>
                     </tbody>
                   </table>
+                 
                 </div>
               </div>
               <div class="widget-item">

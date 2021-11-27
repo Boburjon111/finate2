@@ -36,36 +36,41 @@ include_once("header.php");
                 </div>
                 <div class="info">
                   <h5 class="title">Call Us:</h5>
-                  <p>
-                    <a href="tel://568975468">(00) 568 975 468</a><br>
-                    <a href="tel://+88465748937">+88 465 748 937</a>
-                  </p>
-                </div>
-              </div>
-              <div class="info-item">
-                <div class="icon">
-                  <img src="assets/img/icons/c2.png" alt="Image" width="43" height="73">
-                </div>
-                <div class="info">
-                  <h5 class="title">Email:</h5>
-                  <p>
-                    <a href="mailto://youremail@gmail.com">youremail@gmail.com</a><br>
-                    <a href="mailto://demomail@gmail.com">demomail@gmail.com</a>
-                  </p>
-                </div>
-              </div>
-              <div class="info-item">
-                <div class="icon">
-                  <img src="assets/img/icons/c3.png" alt="Image" width="36" height="46">
-                </div>
-                <div class="info">
-                  <h5 class="title">Address:</h5>
-                  <p>
-                    Sunset Beach, North <br>
-                    Carolina(NC), 28468
-                  </p>
-                </div>
-              </div>
+                 <?php
+                 foreach($array_8 as $key){
+                   echo ' <p>
+                   <a href="tel://568975468">'.$key['phone_1'].'</a><br>
+                   <a href="tel://+88465748937">'.$key['phone_2'].'</a>
+                 </p>
+               </div>
+             </div>
+             <div class="info-item">
+               <div class="icon">
+                 <img src="assets/img/icons/c2.png" alt="Image" width="43" height="73">
+               </div>
+               <div class="info">
+                 <h5 class="title">Email:</h5>
+                 <p>
+                   <a href="mailto://youremail@gmail.com">'.$key['email'].'</a><br>
+                   <a href="mailto://demomail@gmail.com">'.$key['demo_email'].'</a>
+                 </p>
+               </div>
+             </div>
+             <div class="info-item">
+               <div class="icon">
+                 <img src="assets/img/icons/c3.png" alt="Image" width="36" height="46">
+               </div>
+               <div class="info">
+                 <h5 class="title">Address:</h5>
+                 <p>
+                 '.$key['adress'].'
+                 </p>
+               </div>
+             </div>';}
+                 
+                 ?>
+                 
+                 
             </div>
           </div>
           <div class="col-lg-6">
@@ -108,8 +113,9 @@ include_once("header.php");
             <div class="form-message"></div>
           </div>
           <div class="col-lg-6">
-            <div class="map-area">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1912972.6636523942!2d144.28416561146162!3d-38.05127959850456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sbd!4v1634028820404!5m2!1sen!2sbd"></iframe>
+            <div class="map-area"><?php
+
+             echo '<iframe src="'.$key['map_link'].'"></iframe>'?>
             </div>
           </div>
         </div>

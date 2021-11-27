@@ -49,9 +49,9 @@ foreach($array_category as $key1){
     <div class="recent-job-info">
       <div class="salary">
         <h4>'.$key1['price'].'</h4>
-        <p>/'.$key1['workingtime'].'</p>
+        <p>/'.$key1['working_time'].'</p>
       </div>
-      <a class="btn-theme btn-sm" href="job-details.php?id='.$key['id'].'">Apply Now</a>
+      <a class="btn-theme btn-sm" href="job-details.php?id='.$key1['id'].'">Apply Now</a>
     </div>
   </div>
 </div>';
